@@ -2,10 +2,7 @@ import requests
 import re
 from bs4 import BeautifulSoup
 
-url = "https://free-proxy-list.net/"
-page = requests.get(url)
-assert page.status_code==200
-soup = BeautifulSoup(page.text, 'lxml')
+
 
 class CountryNotFoundError(Exception):
     "Country not any continent lists. Please use the full name of the country (Capitalization does not matter)"
@@ -60,7 +57,6 @@ def find_continent(country: str):
 
 
 
-info = soup.find_all('td')
 
 def remove_html_tags(text):
     colortags = re.compile(r"&[a-zA-Z]+;")
@@ -70,21 +66,42 @@ def remove_html_tags(text):
 
 
 def get_proxy(country: str=None, attempts:int=10):
-    test = []
-    attempts*=8    
-    for i in range(0, attempts):
-        test.append(remove_html_tags(str(info[i])))
+    try:
+        url = "https://free-proxy-list.net/"
+        page = requests.get(url)
+        assert page.status_code==200
+        soup = BeautifulSoup(page.text, 'lxml')
+        info = soup.find_all('td')
+        test = []
+        attempts*=8    
+        for i in range(0, attempts):
+            test.append(remove_html_tags(str(info[i])))
 
-    for i in range(0, attempts, 8):
-        if test[i+6] == "yes":
-            if country is None:
-                return test[i]
-            if test[i+3] in find_continent(country):
-                return test[i]
-            else:
-                saved = test[i]
-    print("No avaliable proxy in your region, retrieving proxy in other continents now...")
-    return saved
+        for i in range(0, attempts, 8):
+            if test[i+6] == "yes":
+                if country is None:
+                    return test[i]
+                if test[i+3] in find_continent(country):
+                    return test[i]
+                else:
+                    saved = test[i]
+        print("No avaliable proxy in your region, retrieving proxy in other continents now...")
+        return saved
+    except requests.exceptions.HTTPError as errh:
+        print(f"HTTP Error: {errh}")
+        return
+    except requests.exceptions.ConnectionError as errc:
+        print(f"Error connecting: {errc}")
+        return
+    except requests.exceptions.URLRequired as erru:
+        print(f"A valid URL is required: {erru}")
+        return
+    except requests.exceptions.TooManyRedirects as errt:
+        print(f"Too many redirects: {errt}")
+        return
+    except:
+        print(f"Something went wrong")
+        return
 
             
 if __name__ == "__main__":
