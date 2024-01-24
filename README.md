@@ -1,4 +1,14 @@
+
+
+<hr>
+
 # Proxy Grabber
+
+<a href="https://github.com/Skylier07/proxy-grabber/commit/main"><img src="https://img.shields.io/github/last-commit/Skylier07/proxy-grabber"></a>
+<a href="https://github.com/Skylier07/proxy-grabber/blob/main/LICENSE"><img src="https://img.shields.io/github/license/Skylier07/proxy-grabber"></a>
+
+
+</p>
 
 Proxy Grabber is a simple Python script utilizing web scraping on Free Proxy List to return a free proxy IP
 
