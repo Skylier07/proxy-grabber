@@ -69,9 +69,9 @@ def remove_html_tags(text):
     return re.sub(clean, '', text_without_entities)
 
 
-def get_proxy(country: str=None, attempts:int=104):
+def get_proxy(country: str=None, attempts:int=10):
     test = []
-        
+    attempts*=8    
     for i in range(0, attempts):
         test.append(remove_html_tags(str(info[i])))
 
