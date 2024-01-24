@@ -4,8 +4,8 @@
 
 # Proxy Grabber
 
-<a href="https://github.com/Skylier07/proxy-grabber/commit/main"><img src="https://img.shields.io/github/last-commit/Skylier07/proxy-grabber"></a>
-<a href="https://github.com/Skylier07/proxy-grabber/blob/main/LICENSE"><img src="https://img.shields.io/github/license/Skylier07/proxy-grabber"></a>
+<img alt="GitHub last commit (branch)" src="https://img.shields.io/github/last-commit/skylier07/proxy-grabber/main">  <img alt="GitHub License" src="https://img.shields.io/github/license/skylier07/proxy-grabber">
+
 
 
 </p>
