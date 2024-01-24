@@ -87,11 +87,10 @@ def get_proxy(country: str=None, attempts:int=10):
     return saved
 
             
-print(get_proxy("taiwan"))
+if __name__ == "__main__":
+    print(get_proxy())
 
             
 
 
 
-#add geo api stuff
-#testing

@@ -8,6 +8,28 @@ Proxy Grabber is a simple Python script utilizing web scraping on Free Proxy Lis
 git clone git@github.com:Skylier07/proxy-grabber.git
 ```
 
+## Requirements & Dependencies
+
+Python 3.6 or above
+
+Install requests
+
+```bash
+pip install requests
+```
+
+BeautifulSoup
+
+```bash
+pip install beautifulsoup4
+```
+
+Lxml phraser
+
+```bash
+pip install lxml
+```
+
 ## Usage
 
 ```python
