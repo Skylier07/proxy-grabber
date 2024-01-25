@@ -1,12 +1,8 @@
-
-
 <hr>
 
 # Proxy Grabber
 
-<img alt="GitHub last commit (branch)" src="https://img.shields.io/github/last-commit/skylier07/proxy-grabber/main">  <img alt="GitHub License" src="https://img.shields.io/github/license/skylier07/proxy-grabber">
-
-
+<a href="https://github.com/Skylier07/proxy-grabber?tab=readme-ov-file"><img alt="GitHub last commit (branch)" src="https://img.shields.io/github/last-commit/skylier07/proxy-grabber/main"></a> <a href="https://github.com/Skylier07/proxy-grabber/blob/main/LICENSE.md"><img alt="GitHub License" src="https://img.shields.io/github/license/skylier07/proxy-grabber"></a>
 
 </p>
 

@@ -65,7 +65,7 @@ def remove_html_tags(text):
     return re.sub(clean, '', text_without_entities)
 
 
-def get_proxy(country: str=None, attempts:int=10):
+def get_proxy(country: str=None, attempts:int=100):
     try:
         url = "https://free-proxy-list.net/"
         page = requests.get(url)
